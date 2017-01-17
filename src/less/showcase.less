@@ -10,8 +10,7 @@ div[data-budgie-component="showcase-list"] { // Showcase List
 		min-width: 350px; // Ensure flexbox enforces 350px width
 		width: 350px;
 		background-color: #fafafa;
-
-		margin-right: 2.5%;
+		margin: 1.5% 2.5% e("calc(1% + 16px)") 16px; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
 
 		@border: e("2px solid #eeeeee");
 		border-top: @border;
@@ -23,6 +22,8 @@ div[data-budgie-component="showcase-list"] { // Showcase List
 			height: 32px;
 			width: 32px;
 			border-radius: 32px;
+			position: absolute;
+			margin: -16px;
 		}
 	}
 }
