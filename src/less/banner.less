@@ -98,6 +98,10 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	// #region Scalable
 
 	@media screen and (max-width: 1023px) { // Mobile
+		& > span, & > a {
+			margin: 15px 0;
+		}
+
 		& > span {
 			.fullWidth;
 
@@ -109,10 +113,6 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 			& > h2 { // Budgie Version
 				font-size: 1.1em;
 			}
-		}
-
-		& > a {
-			margin: 15px 0;
 		}
 	}
 
