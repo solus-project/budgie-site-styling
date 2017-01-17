@@ -21,6 +21,12 @@ div[data-budgie-component="get-page"] {
 		div[data-budgie-component="get-list"] {
 			.fullWidth;
 			margin-top: 2.5%;
+
+			& > div[data-budgie-component="get-list-item"] {
+				& > div[data-budgie-component="get-list-item-info"] {
+					width: e("calc(100% - 190px)"); // Set to 100% - 190px (140 for button, plus 25px side margins)
+				}
+			}
 		}
 	}
 
@@ -28,8 +34,27 @@ div[data-budgie-component="get-page"] {
 
 	div[data-budgie-component="get-list"] { // Get List: Operating Systems to try Budgie on
 		& > div[data-budgie-component="get-list-item"] { // Individual Items
+			display: inline-flex;
+			display: -webkit-inline-flex;
+
 			.fullWidth;
-			height: 100%;
+			min-height: 100px;
+
+			&:nth-child(odd) {
+				background-color: @white; // Have a slightly darker background
+			}
+
+			& > div[data-budgie-component="get-list-item-info"] { // Item Info
+				display: inline-block;
+				height: 50px;
+				padding: 25px;
+
+				& > a { // Link
+					display: block;
+					.fullWidth;
+					font-size: 1.4em;
+				}
+			}
 		}
 	}
 }
