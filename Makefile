@@ -5,7 +5,8 @@ LESSFLAGS = --clean-css \
 	--no-js \
 	--strict-math=on
 
-setup: sync
+setup:
+	git submodule init
 	sudo eopkg install nodejs
 	sudo npm install -g less less-plugin-clean-css less-plugin-glob
 

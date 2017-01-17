@@ -9,7 +9,8 @@ This is the styling for the Budgie Desktop website.
 To get started on LESS development, run `make setup` on your Solus system. If you're not on Solus, you'll need to:
 
 1. Install nodejs and globally npm install: less less-plugin-clean-css less-plugin-glob
-2. Run `make sync`
+2. Run `git submodule init`
+3. Run `make sync`
 
 ### Compile
 
