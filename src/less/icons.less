@@ -2,6 +2,11 @@
 
 // #region Widgets
 
+div[data-budgie-widget-icon] { // Any Widget Icon
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 div[data-budgie-widget-icon="haste"] { // Haste
 	background-color: @pastelGreen;
 	background-image: url("/imgs/widget-icons/haste.png");
@@ -35,8 +40,6 @@ div[data-budgie-widget-icon="screenshot"] { // Screenshot
 div[data-budgie-widget-icon="user-indicator"] { // User Indicator
 	background-color: @black;
 	background-image: url("/imgs/widget-icons/user-indicator.png");
-	background-position: center center;
-	background-repeat: no-repeat;
 }
 
 // #endregion
