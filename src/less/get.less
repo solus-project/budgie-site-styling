@@ -24,7 +24,7 @@ div[data-budgie-component="get-page"] {
 
 			& > div[data-budgie-component="get-list-item"] {
 				& > div[data-budgie-component="get-list-item-info"] {
-					width: e("calc(100% - 190px)"); // Set to 100% - 190px (140 for button, plus 25px side margins)
+					width: e("calc(100% - 140px)"); // Set to 100% - 140px (button)
 				}
 			}
 		}
@@ -37,8 +37,9 @@ div[data-budgie-component="get-page"] {
 			display: inline-flex;
 			display: -webkit-inline-flex;
 
-			.fullWidth;
 			min-height: 100px;
+			width: e("calc(100% - 50px)"); // Width set to account for padding
+			padding: 0 25px; // 25px horizontal padding
 
 			&:nth-child(odd) {
 				background-color: @white; // Have a slightly darker background
@@ -47,7 +48,7 @@ div[data-budgie-component="get-page"] {
 			& > div[data-budgie-component="get-list-item-info"] { // Item Info
 				display: inline-block;
 				height: 50px;
-				padding: 25px;
+				margin-top: 25px;
 
 				& > a { // Link
 					display: block;
