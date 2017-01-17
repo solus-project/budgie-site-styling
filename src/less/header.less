@@ -6,7 +6,9 @@ body {
 	&:not([dir="rtl"]) { // LTR
 		header {
 			& > a:first-of-type { // Logo
-				margin-right: 20px;
+				& > img	{
+					margin-right: 20px;
+				}
 			}
 		}
 	}
@@ -14,7 +16,9 @@ body {
 	&[dir="rtl"] { // LTR
 		header {
 			& > a:first-of-type { // Logo
-				margin-left: 20px;
+				& > img	{
+					margin-left: 20px;
+				}
 			}
 		}
 	}
