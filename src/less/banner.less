@@ -1,5 +1,7 @@
 // Banners
 
+@width: (100 - (unit(@page-margin) * 2));
+
 // #region Directional Support
 
 body {
@@ -37,19 +39,29 @@ div[data-budgie-component$="-banner"] {
 
 	// #endregion
 
-	@width: (100 - (unit(@page-margin) * 2));
-
 	display: flex;
-	min-height: 140px;
-	width: e("@{width}%");
 	color: @white;
 	background-color: @blue;
-	padding: 0 @page-margin;
 }
 
 // #endregion
 
 div[data-budgie-component="solus-banner"] {
+	// #region Scalable
+
+	@media screen and (max-width: 1023px) { // Mobile
+		.fullWidth;
+	}
+
+	@media screen and (min-width: 1024px) { // Non-Mobile
+		height: 400px;
+		width: @width;
+		margin: 0 @page-margin;
+	}
+
+	// #endregion
+
+	min-height: 200px;
 	background-image: url("/imgs/desk.jpg");
 }
 
@@ -94,6 +106,10 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	}
 
 	// #endregion
+
+	min-height: 140px;
+	width: e("@{width}%");
+	padding: 0 @page-margin;
 
 	& > span { // Heading and Budgie Version
 		& > h1, & > h2 { // Headings
