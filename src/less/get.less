@@ -11,6 +11,25 @@ div[data-budgie-component="get-page"] {
 		div[data-budgie-component="get-list"] {
 			width: 80%;
 			margin: 5% 10%; // 5% vertical, 10% horizontal
+
+			& > div[data-budgie-component="get-list-item"] {
+				flex-direction: column;
+
+				& > div[data-budgie-component="get-list-item-download"] { // Download Info
+					display: inline-flex;
+					display: -webkit-inline-flex;
+
+					& > a { // Button
+						width: 50%;
+					}
+
+					& > b { // Version Info
+						width: 50%;
+						line-height: 40px; // Vertically align text with button text
+						text-align: center;
+					}
+				}
+			}
 		}
 	}
 
@@ -25,6 +44,12 @@ div[data-budgie-component="get-page"] {
 			& > div[data-budgie-component="get-list-item"] {
 				& > div[data-budgie-component="get-list-item-info"] {
 					width: e("calc(100% - 140px)"); // Set to 100% - 140px (button)
+				}
+
+				& > div[data-budgie-component="get-list-item-download"] { // Download Info
+					& > b { // Version Info
+						margin-top: 5px;
+					}
 				}
 			}
 		}
@@ -47,7 +72,7 @@ div[data-budgie-component="get-page"] {
 
 			& > div[data-budgie-component="get-list-item-info"] { // Item Info
 				display: inline-block;
-				height: 50px;
+				min-height: 50px;
 
 				& > a { // Link
 					display: block;
@@ -60,7 +85,6 @@ div[data-budgie-component="get-page"] {
 				& > b { // Version Info
 					display: block;
 					font-weight: normal;
-					margin-top: 5px;
 
 					&[data-budgie-component="version-latest"] { // Latest version of Budgie
 						color: @darkblue;
