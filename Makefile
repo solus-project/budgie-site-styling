@@ -6,9 +6,8 @@ LESSFLAGS = --clean-css \
 	--strict-math=on
 
 setup: sync
-	sudo eopkg install nodejs ruby-devel woff-tools
+	sudo eopkg install nodejs
 	sudo npm install -g less less-plugin-clean-css less-plugin-glob
-	sudo gem install fontcustom
 
 site: sync
 	lessc $(LESSFLAGS) src/less/website.less > build/website.css
