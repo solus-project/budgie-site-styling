@@ -42,6 +42,16 @@ div[data-budgie-component$="-banner"] {
 	display: flex;
 	color: @white;
 	background-color: @blue;
+
+	& > span { // Heading
+		& > h1, & > h2 { // Headings
+			font-weight: normal; // No bold.
+		}
+	}
+
+	& > span > a, & > a { //Link
+		border: 2px solid @white;
+	}
 }
 
 // #endregion
@@ -57,12 +67,22 @@ div[data-budgie-component="solus-banner"] {
 		height: 400px;
 		width: e("@{width}%");
 		margin: 0 @page-margin;
+
+		& > span {
+			height: 200px;
+			width: 60%;
+			margin: 100px,
+		}
 	}
 
 	// #endregion
 
 	min-height: 200px;
 	background-image: url("/imgs/desk.jpg");
+
+	& > span {
+		display: block;
+	}
 }
 
 div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Page
@@ -111,17 +131,9 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	width: e("@{width}%");
 	padding: 0 @page-margin;
 
-	& > span { // Heading and Budgie Version
-		& > h1, & > h2 { // Headings
-			font-weight: normal; // No bold.
-		}
-
+	& > span { // Heading
 		& > h2 { // Budgie Version
 			margin: 0;
 		}
-	}
-
-	& > a { // Learn More Link
-		border: 2px solid @white;
 	}
 }
