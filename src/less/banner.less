@@ -38,22 +38,41 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	// #region Scalable
 	
 	@media screen and (max-width: 1023px) { // Mobile
+		flex-direction: column;
+
 		& > span {
 			.fullWidth;
+
+			& > h1 { // First Heading
+				font-size: 1.6em;
+				margin: 15px 0 0 0;
+			}
+
+			& > h2 { // Budgie Version
+				font-size: 1.1em;
+			}
 		}
 
 		& > a {
-			margin-top: 20px;
+			margin: 15px 0;
 		}
 	}
 
 	@media screen and (min-width: 1024px) { // Non-Mobile
 		& > span {
 			width: 80%;
+
+			& > h1 { // First Heading
+				margin: 35px 0 0 0;
+			}
+
+			& > h2 { // Budgie Version
+				font-size: 1.2em;
+			}
 		}
 
 		& > a {
-			margin-top: 60px;
+			margin: 40px 0;
 		}
 	}
 
@@ -64,12 +83,7 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 			font-weight: normal; // No bold.
 		}
 
-		& > h1 { // First Heading
-			margin: 30px 0 0 0;
-		}
-
 		& > h2 { // Budgie Version
-			font-size: 1.2em;
 			margin: 0;
 		}
 	}
