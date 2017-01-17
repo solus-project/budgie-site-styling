@@ -37,9 +37,9 @@ div[data-budgie-component="get-page"] {
 			display: inline-flex;
 			display: -webkit-inline-flex;
 
-			min-height: 100px;
+			min-height: 50px;
 			width: e("calc(100% - 50px)"); // Width set to account for padding
-			padding: 0 25px; // 25px horizontal padding
+			padding: 25px;
 
 			&:nth-child(odd) {
 				background-color: @white; // Have a slightly darker background
@@ -48,7 +48,6 @@ div[data-budgie-component="get-page"] {
 			& > div[data-budgie-component="get-list-item-info"] { // Item Info
 				display: inline-block;
 				height: 50px;
-				margin-top: 25px;
 
 				& > a { // Link
 					display: block;
