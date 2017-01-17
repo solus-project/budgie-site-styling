@@ -119,10 +119,8 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	@media screen and (min-width: 1024px) { // Non-Mobile
 		& > span {
 			width: 80%;
-
-			& > h1 { // First Heading
-				margin: 35px 0 0 0;
-			}
+			margin-top: 35px;
+			margin-bottom: 35px;
 
 			& > h2 { // Budgie Version
 				font-size: 1.2em;
@@ -141,7 +139,8 @@ div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Pa
 	padding: 0 @page-margin;
 
 	& > span { // Heading
-		& > h2 { // Budgie Version
+
+		& > h1, & > h2 { // Heading Text
 			margin: 0;
 		}
 	}
