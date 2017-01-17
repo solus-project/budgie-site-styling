@@ -1,0 +1,21 @@
+// Budgie Showcase
+
+div[data-budgie-component="showcase-list"] { // Showcase List
+	display: inline-flex;
+	display: -webkit-inline-flex;
+
+	& > div[data-budgie-component="showcase-item"] { // Showcase Item
+		height: 150px;
+		min-width: 350px; // Ensure flexbox enforces 350px width
+		width: 350px;
+		background-color: #fafafa;
+
+		margin-right: 2.5%;
+
+		@border: "2px solid #eeeeee";
+		border-top: @border;
+		border-left: @border;
+		border-right: @border;
+		box-shadow: 0 4px 4px 0 #eeeeee; // 0 x offset, 4px y offset, 4px blur, no spread.
+	}
+}
