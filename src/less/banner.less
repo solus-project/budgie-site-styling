@@ -1,10 +1,80 @@
 // Banners
 
+// #region Directional Support
+
+body {
+	&:not([dir="rtl"]) { // LTR
+		div[data-budgie-component="simplicity-banner"] {
+			@media screen and (min-width: 1024px) { // Non-Mobile
+				& > span {
+					margin-right: e("calc(20% - 40px)");
+				}
+			}
+		}
+	}
+
+	&[dir="rtl"] { // RTL
+		div[data-budgie-component="simplicity-banner"] {
+			@media screen and (min-width: 1024px) { // Non-Mobile
+				& > span {
+					margin-left: e("calc(20% - 40px)");
+				}
+			}
+		}
+	}
+}
+
+// #endregion
+
 div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Page
-	display: inline-block; // Set to inline block to remove user agent stylesheeting that may apply some natural padding.
+	display: flex;
+	min-height: 140px;
 	@width: (100 - (unit(@page-margin) * 2));
 	width: e("@{width}%");
 	padding: 0 @page-margin;
 	color: @white;
 	background-color: @blue;
+
+	// #region Scalable
+	
+	@media screen and (max-width: 1023px) { // Mobile
+		& > span {
+			.fullWidth;
+		}
+
+		& > a {
+			margin-top: 20px;
+		}
+	}
+
+	@media screen and (min-width: 1024px) { // Non-Mobile
+		& > span {
+			width: 80%;
+		}
+
+		& > a {
+			margin-top: 60px;
+		}
+	}
+
+	// #endregion
+
+	& > span { // Heading and Budgie Version
+		& > h1, & > h2 { // Headings
+			font-weight: normal; // No bold.
+		}
+
+		& > h1 { // First Heading
+			margin: 30px 0 0 0;
+		}
+
+		& > h2 { // Budgie Version
+			font-size: 1.2em;
+			margin: 0;
+		}
+	}
+
+	& > a { // Learn More Link
+		border: 2px solid @white;
+	}
 }
