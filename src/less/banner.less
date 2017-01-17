@@ -1,0 +1,10 @@
+// Banners
+
+div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Page
+	display: inline-block; // Set to inline block to remove user agent stylesheeting that may apply some natural padding.
+	@width: 100 - (unit(@page-margin) * 2);
+	width: e("@{width} %");
+	padding: 0 @page-margin;
+	color: @white;
+	background-color: @blue;
+}
