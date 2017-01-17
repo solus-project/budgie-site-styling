@@ -1,0 +1,3 @@
+[submodule "solbit"]
+	path = solbit
+	url = https://github.com/solus-project/solbit.git
