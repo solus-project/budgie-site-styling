@@ -59,6 +59,12 @@ div[data-budgie-component$="-banner"] {
 div[data-budgie-component="solus-banner"] {
 	// #region Scalable
 
+	@media screen and (max-width: 1023px) {
+		& > span {
+			margin: 0 10% 5% 10%; // 10% left / right, 5% bottom
+		}
+	}
+
 	@media screen and (min-width: 1024px) { // Non-Mobile
 		& > span {
 			height: 200px;
