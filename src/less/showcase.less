@@ -25,5 +25,25 @@ div[data-budgie-component="showcase-list"] { // Showcase List
 			position: absolute;
 			margin: -16px;
 		}
+
+		& > div[data-budgie-component="showcase-item-info"] { // Info
+			height: 70px;
+			width: e("calc(100% - 40px)");
+			padding: 20px;
+
+			& > b { // Name
+				font-size: 1.2em;
+				font-weight: normal;
+			}
+		}
+
+		& > div[data-budgie-component="showcase-item-links"] {
+			height: 40px;
+			width: e("calc(100% - 40px)");
+			font-size: 1.1em;
+			line-height: 40px;
+			border-top: 2px solid #eeeeee;
+			padding: 0 20px;
+		}
 	}
 }
