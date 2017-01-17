@@ -54,6 +54,20 @@ div[data-budgie-component="get-page"] {
 					.fullWidth;
 					font-size: 1.4em;
 				}
+
+				& > b { // Version Info
+					display: block;
+					font-weight: normal;
+					margin-top: 5px;
+
+					&[data-budgie-component="version-latest"] { // Latest version of Budgie
+						color: @darkblue;
+					}
+
+					&[data-budgie-component="version-outdated"] { // Outdated version of Budgie
+						color: @red;
+					}
+				}
 			}
 		}
 	}
