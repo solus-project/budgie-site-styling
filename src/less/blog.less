@@ -1,0 +1,32 @@
+// Blog List and Posts
+
+div[data-budgie-component="blog-list"] { // Blog List
+	// #region Scalable
+
+	@media screen and (max-width: 1023px) { // Mobile
+		.fullWidth;
+	}
+
+	@media screen and (min-width: 1024px) { // Non-Mobile
+		width: 80%; // Don't have it take up the full width of the page
+	}
+
+	// #endregion
+
+	& > h3 { // Latest News heading
+		font-size: 1.8em;
+		font-weight: normal;
+		margin-top: 0;
+	}
+}
+
+div[data-budgie-component="blog-info"] { // Blog Post Info
+	.fullWidth;
+
+	& > a { // Blog Link
+		display: block;
+		.fullWidth;
+		font-size: 1.4em;
+		line-height: 2.4em;
+	}
+}
