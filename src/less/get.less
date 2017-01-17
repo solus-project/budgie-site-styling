@@ -62,6 +62,11 @@ div[data-budgie-component="get-page"] {
 	// #endregion
 
 	div[data-budgie-component="get-list"] { // Get List: Operating Systems to try Budgie on
+		& > h1 { // Try Header
+			font-size: 1.8em;
+			font-weight: normal;
+		}
+
 		& > div[data-budgie-component="get-list-item"] { // Individual Items
 			display: inline-flex;
 			display: -webkit-inline-flex;
@@ -70,7 +75,7 @@ div[data-budgie-component="get-page"] {
 			width: e("calc(100% - 50px)"); // Width set to account for padding
 			padding: 25px;
 
-			&:nth-child(odd) {
+			&:nth-of-type(odd) {
 				background-color: @white; // Have a slightly darker background
 			}
 
