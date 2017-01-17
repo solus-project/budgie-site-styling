@@ -26,20 +26,37 @@ body {
 
 // #endregion
 
-div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Page
-	display: flex;
-	min-height: 140px;
-	@width: (100 - (unit(@page-margin) * 2));
-	width: e("@{width}%");
-	padding: 0 @page-margin;
-	color: @white;
-	background-color: @blue;
+// #region Generic Banner Styling
 
+div[data-budgie-component$="-banner"] {
 	// #region Scalable
-	
+
 	@media screen and (max-width: 1023px) { // Mobile
 		flex-direction: column;
+	}
 
+	// #endregion
+
+	@width: (100 - (unit(@page-margin) * 2));
+
+	display: flex;
+	min-height: 140px;
+	width: e("@{width}%");
+	color: @white;
+	background-color: @blue;
+	padding: 0 @page-margin;
+}
+
+// #endregion
+
+div[data-budgie-component="solus-banner"] {
+	background-image: url("/imgs/desk.jpg");
+}
+
+div[data-budgie-component="simplicity-banner"] { // Simplicity Banner on Home Page
+	// #region Scalable
+
+	@media screen and (max-width: 1023px) { // Mobile
 		& > span {
 			.fullWidth;
 
