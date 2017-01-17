@@ -8,7 +8,7 @@ div[data-budgie-component="get-page"] {
 	@media screen and (max-width: 1023px) { // Mobile
 		.fullWidth;
 
-		& > div[data-budgie-component="get-list"] {
+		div[data-budgie-component="get-list"] {
 			width: 80%;
 			margin: 5% 10%; // 5% vertical, 10% horizontal
 		}
@@ -18,7 +18,7 @@ div[data-budgie-component="get-page"] {
 		width: e("@{width}%");
 		margin: 0 @page-margin;
 
-		& > div[data-budgie-component="get-list"] {
+		div[data-budgie-component="get-list"] {
 			.fullWidth;
 			margin-top: 2.5%;
 		}
@@ -26,7 +26,7 @@ div[data-budgie-component="get-page"] {
 
 	// #endregion
 
-	& > div[data-budgie-component="get-list"] { // Get List: Operating Systems to try Budgie on
+	div[data-budgie-component="get-list"] { // Get List: Operating Systems to try Budgie on
 		& > div[data-budgie-component="get-list-item"] { // Individual Items
 			.fullWidth;
 			height: 100%;
