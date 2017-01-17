@@ -59,15 +59,7 @@ div[data-budgie-component$="-banner"] {
 div[data-budgie-component="solus-banner"] {
 	// #region Scalable
 
-	@media screen and (max-width: 1023px) { // Mobile
-		.fullWidth;
-	}
-
 	@media screen and (min-width: 1024px) { // Non-Mobile
-		height: 400px;
-		width: e("@{width}%");
-		margin: 0 @page-margin;
-
 		& > span {
 			height: 200px;
 			width: 60%;
@@ -77,6 +69,7 @@ div[data-budgie-component="solus-banner"] {
 
 	// #endregion
 
+	.fullWidth;
 	min-height: 200px;
 	background-image: url("/imgs/desk.jpg");
 

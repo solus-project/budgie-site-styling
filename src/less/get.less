@@ -1,0 +1,17 @@
+// Get page
+
+@width: (100 - (unit(@page-margin) * 2));
+
+div[data-budgie-component="get-page"] {
+	// #region Scalable
+
+	@media screen and (max-width: 1023px) { // Mobile
+		.fullWidth;
+	}
+
+	@media screen and (min-width: 1024px) { // Non-Mobile
+		width: e("@{width}%");
+	}
+
+	// #endregion
+}
