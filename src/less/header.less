@@ -14,7 +14,7 @@ body {
 			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
 				& > div[data-budgie-component="fancy-get-nav-links"] {
 					& > a:first-of-type { // First link
-						border-right: 2% solid @grey;
+						border-right: 2px solid @grey;
 					}
 				}
 			}
@@ -32,7 +32,7 @@ body {
 			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
 				& > div[data-budgie-component="fancy-get-nav-links"] {
 					& > a:first-of-type { // First link
-						border-left: 2% solid @grey;
+						border-left: 2px solid @grey;
 					}
 				}
 			}
@@ -62,13 +62,15 @@ header { // Header
 		}
 
 		& > div[data-budgie-component="fancy-get-nav-links"] {
+			display: inline-flex;
+			display: -webkit-inline-flex;
 			.fullWidth;
 			height: 60px;
 			line-height: 60px;
 
 			& > a { // Individual Links
 				display: inline-block;
-				width: 49%; // 2% border will be in the middle of the two links
+				width: e("calc(50% - 1px)");
 				text-align: center;
 			}
 		}
