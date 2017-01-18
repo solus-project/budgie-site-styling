@@ -9,13 +9,16 @@ div[data-budgie-component="list"][data-budgie-component-type="blog"]  { // Blog 
 
 	@media screen and (min-width: 1024px) { // Non-Mobile
 		width: 80%; // Don't have it take up the full width of the page
+
+		& > h3 { // Latest News heading
+			margin-top: 0;
+		}
 	}
 
 	// #endregion
 
 	& > h3 { // Latest News heading
 		font-size: 1.8em;
-		margin-top: 0;
 	}
 }
 
