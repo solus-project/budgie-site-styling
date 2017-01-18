@@ -2,13 +2,10 @@
 
 div[data-budgie-component="list"] {
 	&[data-budgie-component-type="blog"] { // Blog
-		div[data-budgie-component="list-item"] {
+		& > div[data-budgie-component="list-item"] {
 			margin-bottom: 25px;
-
-			&:not(:last-of-type) { // Not last in list
-				padding-bottom: 25px;
-				border-bottom: 2px solid @grey;
-			}
+			padding-bottom: 25px;
+			border-bottom: 2px solid @grey;
 		}
 	}
 
