@@ -1,5 +1,27 @@
 // Budgie Showcase
 
+// #region Directional Specific
+
+body {
+	&:not([dir="rtl"]) { // LTR
+		div[data-budgie-component="showcase-list"] { // Showcase List	
+			& > div[data-budgie-component="showcase-item"] { // Showcase Item
+				margin: 1.5% 2.5% e("calc(1% + 16px)") 16px; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
+			}
+		}
+	}
+
+	&[dir="rtl"] { // RTL
+		div[data-budgie-component="showcase-list"] { // Showcase List
+			& > div[data-budgie-component="showcase-item"] { // Showcase Item
+				margin: 1.5% 16px e("calc(1% + 16px)") 2.5%; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
+			}
+		}
+	}
+}
+
+// #endregion
+
 div[data-budgie-component="showcase-list"] { // Showcase List
 	.fullWidth;
 	display: inline-flex;
@@ -22,7 +44,6 @@ div[data-budgie-component="showcase-list"] { // Showcase List
 
 		height: 150px;
 		background-color: #fafafa;
-		margin: 1.5% 2.5% e("calc(1% + 16px)") 16px; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
 
 		@border: e("2px solid #eeeeee");
 		border-top: @border;
