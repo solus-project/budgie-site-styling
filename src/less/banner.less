@@ -69,6 +69,22 @@ div[data-budgie-component="solus-banner"] {
 
 	// #endregion
 
+	&[data-budgie-component-type="menu"] { // Menu Banner
+		& > span { // Content
+			& > h1 { // Get on Solus
+				font-size: 1.4em;
+			}
+
+			& > h2 { // Flagship
+				font-size: 1em;
+			}
+		}
+
+		& > section { // Budgie Version
+			display: none;
+		}
+	}
+
 	.fullWidth;
 	min-height: 200px;
 	background-image: url("/imgs/desk.jpg");
