@@ -44,6 +44,10 @@ div[data-budgie-component="get-page"] {
 		div[data-budgie-component="list"][data-budgie-component-type="get"] {
 			.fullWidth;
 
+			& > h1 { // Try Header
+				margin: 1.5% 0;
+			}
+
 			& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] {
 				& > div[data-budgie-component="get-list-item-info"] {
 					width: e("calc(100% - 140px)"); // Set to 100% - 140px (button)
@@ -63,7 +67,6 @@ div[data-budgie-component="get-page"] {
 	div[data-budgie-component="list"][data-budgie-component-type="get"] { // Get List: Operating Systems to try Budgie on
 		& > h1 { // Try Header
 			font-size: 1.8em;
-			margin: 1.5% 0;
 		}
 
 		& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] { // Individual Items
