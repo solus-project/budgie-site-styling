@@ -27,7 +27,6 @@ body {
 // #endregion
 
 div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
-	display: none;
 	height: 220px;
 	width: 400px;
 	background-color: @white;
@@ -36,6 +35,10 @@ div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
 	position: absolute;
 	z-index: 10; // Sit above everything
 	top: 80px; // Sit below header always.
+
+	&:not([data-solbit-show]) { // If we're not doing a force show
+		display: none; // Hide
+	}
 
 	& > div[data-budgie-component="solus-banner"] { // Solus Banner
 		height: 160px;
