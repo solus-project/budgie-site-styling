@@ -31,4 +31,30 @@ header { // Header
 		color: @text; // Override Solbit link color
 		font-size: 1.2em;
 	}
+
+	div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+		height: 220px;
+		width: 440px;
+		background-color: @white;
+		border-top: 2px solid @grey;
+		box-shadow: 0 4px 4px 0 #eeeeee; // 0 x offset, 4px y offset, 4px blur, no spread.
+		position: absolute;
+		z-index: 10; // Sit above everything
+
+		& > div[data-budgie-component="solus-banner"] { // Solus Banner
+			height: 140px;
+		}
+
+		& > div[data-budgie-compoonent="fancy-get-nav-links"] {
+			.fullWidth;
+			height: 60px;
+			line-height: 60px;
+
+			& > a { // Individual Links
+				display: inline-block;
+				width: 49%; // 2% border will be in the middle of the two links
+				text-align: center;
+			}
+		}
+	}
 }

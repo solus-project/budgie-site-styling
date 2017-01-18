@@ -60,10 +60,19 @@ div[data-budgie-component="solus-banner"] {
 	}
 
 	@media screen and (min-width: 1024px) { // Non-Mobile
-		& > span {
-			height: 200px;
-			width: 60%;
-			margin: 100px,
+		&:not([data-budgie-component-type="menu"]) { // Full-size Banner
+			& > span {
+				height: 200px;
+				width: 60%;
+				margin: 100px,
+			}
+		}
+
+		&[data-budgie-component-type="menu"] { // Menu Banner
+			& > span {
+				.fullWidth;
+				margin: 10px;
+			}
 		}
 	}
 
