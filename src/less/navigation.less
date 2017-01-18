@@ -4,22 +4,20 @@
 
 body {
 	&:not([dir="rtl"]) { // LTR
-			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
-				& > div[data-budgie-component="fancy-get-nav-links"] {
-					& > a:first-of-type { // First link
-						border-right: 2px solid @grey;
-					}
+		div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+			& > div[data-budgie-component="fancy-get-nav-links"] {
+				& > a:first-of-type { // First link
+					border-right: 2px solid @grey;
 				}
 			}
 		}
 	}
 
 	&[dir="rtl"] { // LTR
-			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
-				& > div[data-budgie-component="fancy-get-nav-links"] {
-					& > a:first-of-type { // First link
-						border-left: 2px solid @grey;
-					}
+		div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+			& > div[data-budgie-component="fancy-get-nav-links"] {
+				& > a:first-of-type { // First link
+					border-left: 2px solid @grey;
 				}
 			}
 		}
