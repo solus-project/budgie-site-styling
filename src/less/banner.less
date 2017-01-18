@@ -78,6 +78,10 @@ div[data-budgie-component="solus-banner"] {
 
 	// #endregion
 
+	&:not([data-budgie-component-type="menu"]) { // Full-size Banner
+		min-height: 200px;
+	}
+
 	&[data-budgie-component-type="menu"] { // Menu Banner
 		& > span { // Content
 			& > h1 { // Get on Solus
@@ -95,7 +99,6 @@ div[data-budgie-component="solus-banner"] {
 	}
 
 	.fullWidth;
-	min-height: 200px;
 	background-image: url("/imgs/desk.jpg");
 	background-size: cover; // Scale the image so it'll render well on UHD monitors without repeating.
 
