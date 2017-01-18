@@ -1,0 +1,57 @@
+// Fancy Navigation
+
+// #region Directional Styling
+
+body {
+	&:not([dir="rtl"]) { // LTR
+			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+				& > div[data-budgie-component="fancy-get-nav-links"] {
+					& > a:first-of-type { // First link
+						border-right: 2px solid @grey;
+					}
+				}
+			}
+		}
+	}
+
+	&[dir="rtl"] { // LTR
+			div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+				& > div[data-budgie-component="fancy-get-nav-links"] {
+					& > a:first-of-type { // First link
+						border-left: 2px solid @grey;
+					}
+				}
+			}
+		}
+	}
+}
+
+// #endregion
+
+div[data-budgie-component="fancy-get-nav"] { // Fancy Get Nav item
+	height: 220px;
+	width: 400px;
+	background-color: @white;
+	border-top: 2px solid @grey;
+	box-shadow: 0 4px 4px 0 @grey; // 0 x offset, 4px y offset, 4px blur, no spread.
+	position: absolute;
+	z-index: 10; // Sit above everything
+
+	& > div[data-budgie-component="solus-banner"] { // Solus Banner
+		height: 160px;
+	}
+
+	& > div[data-budgie-component="fancy-get-nav-links"] {
+		display: inline-flex;
+		display: -webkit-inline-flex;
+		.fullWidth;
+		height: 60px;
+		line-height: 60px;
+
+		& > a { // Individual Links
+			display: inline-block;
+			width: e("calc(50% - 1px)");
+			text-align: center;
+		}
+	}
+}
