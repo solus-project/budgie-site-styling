@@ -1,34 +1,12 @@
 // Budgie Header
 
-// #region Directional Styling
-
-body {
-	&:not([dir="rtl"]) { // LTR
-		header {
-			& > a:first-of-type { // Logo
-				& > img	{
-					margin-right: 20px;
-				}
-			}
-		}
-	}
-
-	&[dir="rtl"] { // LTR
-		header {
-			& > a:first-of-type { // Logo
-				& > img	{
-					margin-left: 20px;
-				}
-			}
-		}
-	}
-}
-
-// #endregion
-
 header { // Header
 	& > a:first-of-type { // Logo
 		color: @text; // Override Solbit link color
 		font-size: 1.2em;
+
+		& > img	{
+			margin-right: 20px;
+		}
 	}
 }
