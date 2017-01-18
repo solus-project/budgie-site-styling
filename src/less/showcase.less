@@ -7,9 +7,20 @@ div[data-budgie-component="showcase-list"] { // Showcase List
 	flex-wrap: wrap;
 
 	& > div[data-budgie-component="showcase-item"] { // Showcase Item
+		// #region Scaling
+
+		@media screen and (max-width: 1023px) { // Mobile
+			width: 100%;
+		}
+
+		@media screen and (min-width: 1024px) { // Non-Mobile
+			min-width: 350px; // Ensure flexbox enforces 350px width
+			width: 350px;
+		}
+
+		// #endregion
+
 		height: 150px;
-		min-width: 350px; // Ensure flexbox enforces 350px width
-		width: 350px;
 		background-color: #fafafa;
 		margin: 1.5% 2.5% e("calc(1% + 16px)") 16px; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
 
