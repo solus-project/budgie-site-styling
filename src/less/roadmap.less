@@ -1,0 +1,65 @@
+// Roadmap
+
+// #region Directional Specific
+
+body {
+	&:not([dir="rtl"]) { // LTR
+		div[data-budgie-component="roadmap"] { // Roadmap Content
+			& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+				border-left: 1px solid @grey;
+				margin-left: 32px;
+
+				div[data-budgie-component="roadmap-circle"] { // Roadmap Circle
+					left: -16px;
+				}
+			}
+		}
+	}
+
+	&[dir="rtl"] { // RTL
+		div[data-budgie-component="roadmap"] { // Roadmap Content
+			& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+				border-right: 1px solid @grey;
+				margin-right: 32px;
+
+				div[data-budgie-component="roadmap-circle"] { // Roadmap Circle
+					right: 16px;
+				}
+			}
+		}
+	}
+}
+
+// #endregion
+
+div[data-budgie-component="roadmap"] { // Roadmap Content
+	& > h2 { // Roadmap Description
+		font-size: 1.2em;
+	}
+
+	& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+		.fullWidth;
+
+		& > div[data-budgie-component="roadmap-item"] { // Individual Items
+			.fullWidth;
+
+			& > div[data-budgie-component="roadmap-header"] { // Roadmap Header
+				.fullWidth;
+
+				& > div[data-budgie-component="roadmap-circle"] { // Roadmap Circle
+					height: 64px;
+					width: 64px;
+					color: @white;
+					line-height: 64px;
+					text-align: center;
+					position: absolute;
+				}
+
+				& > b { // Roadmap Version
+					color: @blue;
+					font-size: 1.6em;
+				}
+			}
+		}
+	}
+}
