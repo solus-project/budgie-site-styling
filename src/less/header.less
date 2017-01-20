@@ -1,12 +1,40 @@
 // Budgie Header
 
+// #region Directional Specific
+
+body {
+	&:not([dir="rtl"]) { // LTR
+		header {
+			& > a:first-of-type { // Logo Content
+				& > img { // Budgie Logo
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	&[dir="rtl"] { // RTL
+		header {
+			& > a:first-of-type { // Logo Content
+				& > img { // Budgie Logo
+					@media screen and (max-width: 1023px) { // Mobile
+						margin-right: 20px; // We enforce direction: ltr for Header on Mobile via Solbit
+					}
+
+					@media screen and (min-width: 1024px) { // Non-mobile
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// #endregion
+
 header { // Header
 	& > a:first-of-type { // Logo
 		color: @text; // Override Solbit link color
 		font-size: 1.2em;
-
-		& > img	{
-			margin-right: 20px;
-		}
 	}
 }
