@@ -4,9 +4,9 @@
 
 body {
 	&:not([dir="rtl"]) { // LTR
-		@media screen and (min-width: 1024px) { // Non-mobile
-			div[data-budgie-component="roadmap"] { // Roadmap Content
-				& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
+		div[data-budgie-component="roadmap"] { // Roadmap Content
+			& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
+				@media screen and (min-width: 1024px) { // Non-mobile
 					border-left: 1px solid @grey;
 					margin-left: 32px;
 
@@ -15,21 +15,24 @@ body {
 							margin-left: -32px;
 						}
 
-						& > div[data-budgie-component="roadmap-header"] > b,
-						& > div[data-budgie-component="roadmap-header"] > section,
 						& > section {
 							margin-left: 48px;
 						}
 					}
+				}
+
+				& > div[data-budgie-component="roadmap-header"] > b,
+				& > div[data-budgie-component="roadmap-header"] > section {
+					margin-left: 48px;
 				}
 			}
 		}
 	}
 
 	&[dir="rtl"] { // RTL
-		@media screen and (min-width: 1024px) { // Non-mobile
-			div[data-budgie-component="roadmap"] { // Roadmap Content
-				& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
+		div[data-budgie-component="roadmap"] { // Roadmap Content
+			& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
+				@media screen and (min-width: 1024px) { // Non-mobile
 					border-right: 1px solid @grey;
 					margin-right: 32px;
 
@@ -38,12 +41,15 @@ body {
 							margin-right: -32px;
 						}
 
-						& > div[data-budgie-component="roadmap-header"] > b,
-						& > div[data-budgie-component="roadmap-header"] > section,
 						& > section {
 							margin-right: 48px;
 						}
 					}
+				}
+
+				& > div[data-budgie-component="roadmap-header"] > b,
+				& > div[data-budgie-component="roadmap-header"] > section {
+					margin-right: 48px;
 				}
 			}
 		}
@@ -66,6 +72,7 @@ div[data-budgie-component="roadmap"] { // Roadmap Content
 
 			& > div[data-budgie-component="roadmap-header"] { // Roadmap Header
 				.fullWidth;
+				min-height: 64px;
 				margin-bottom: 1.5%;
 
 				@roadmapCircleColors : @blue, @pastelGreen, @pastelRed, @pastelOrange;
