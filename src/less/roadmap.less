@@ -46,6 +46,8 @@ div[data-budgie-component="roadmap"] { // Roadmap Content
 			& > div[data-budgie-component="roadmap-header"] { // Roadmap Header
 				.fullWidth;
 
+				@roadmapCircleColors : @blue, @pastelGreen, @pastelRed, @pastelOrange;
+
 				& > div[data-budgie-component="roadmap-circle"] { // Roadmap Circle
 					height: 64px;
 					width: 64px;
@@ -53,6 +55,15 @@ div[data-budgie-component="roadmap"] { // Roadmap Content
 					line-height: 64px;
 					text-align: center;
 					position: absolute;
+
+					.createColorTypes(@maxnum, @index: 1) when (@index <= @maxnum) {
+						&[data-budgie-colornum="@{index}"] {
+							background-color: extract(@roadmapCircleColors, @index);
+						}
+						.createColorTypes(@maxnum, (@index + 1));
+					}
+
+					.createColorTypes(4);
 				}
 
 				& > b { // Roadmap Version
