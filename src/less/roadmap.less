@@ -15,8 +15,8 @@ body {
 							margin-left: -32px;
 						}
 
-						& > div[data-budgie-component="budgie-header"] > b,
-						& > div[data-budgie-component="budgie-header"] > section,
+						& > div[data-budgie-component="roadmap-header"] > b,
+						& > div[data-budgie-component="roadmap-header"] > section,
 						& > section {
 							margin-left: 48px;
 						}
@@ -38,8 +38,8 @@ body {
 							margin-right: -32px;
 						}
 
-						& > div[data-budgie-component="budgie-header"] > b,
-						& > div[data-budgie-component="budgie-header"] > section,
+						& > div[data-budgie-component="roadmap-header"] > b,
+						& > div[data-budgie-component="roadmap-header"] > section,
 						& > section {
 							margin-right: 48px;
 						}
@@ -62,9 +62,11 @@ div[data-budgie-component="roadmap"] { // Roadmap Content
 
 		& > div[data-budgie-component="roadmap-item"] { // Individual Items
 			.fullWidth;
+			min-height: 120px; // Seems like a sane min-height
 
 			& > div[data-budgie-component="roadmap-header"] { // Roadmap Header
 				.fullWidth;
+				margin-bottom: 1.5%;
 
 				@roadmapCircleColors : @blue, @pastelGreen, @pastelRed, @pastelOrange;
 
