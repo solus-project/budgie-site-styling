@@ -6,7 +6,7 @@ body {
 	&:not([dir="rtl"]) { // LTR
 		div[data-budgie-component="showcase-list"] { // Showcase List	
 			& > div[data-budgie-component="showcase-item"] { // Showcase Item
-				margin: 1.5% 2.5% e("calc(1% + 16px)") 16px; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
+				margin: 1.5em 2.5% e("calc(1.5em + 16px)") 16px; // Have 1.5em top margin, 2.5% right, account for 16px offset for fancy icon thing
 			}
 		}
 	}
@@ -14,7 +14,7 @@ body {
 	&[dir="rtl"] { // RTL
 		div[data-budgie-component="showcase-list"] { // Showcase List
 			& > div[data-budgie-component="showcase-item"] { // Showcase Item
-				margin: 1.5% 16px e("calc(1% + 16px)") 2.5%; // Have roughly 2.5% around, account for 16px offset for fancy icon thing
+				margin: 1.5em 16px e("calc(1.5em + 16px)") 2.5%; // Have 1.5em top margin, 2.5% left, account for 16px offset for fancy icon thing
 			}
 		}
 	}
