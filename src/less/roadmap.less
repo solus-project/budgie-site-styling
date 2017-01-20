@@ -5,7 +5,7 @@
 body {
 	&:not([dir="rtl"]) { // LTR
 		div[data-budgie-component="roadmap"] { // Roadmap Content
-			& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+			& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
 				border-left: 1px solid @grey;
 				margin-left: 32px;
 
@@ -18,7 +18,7 @@ body {
 
 	&[dir="rtl"] { // RTL
 		div[data-budgie-component="roadmap"] { // Roadmap Content
-			& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+			& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
 				border-right: 1px solid @grey;
 				margin-right: 32px;
 
@@ -37,7 +37,7 @@ div[data-budgie-component="roadmap"] { // Roadmap Content
 		font-size: 1.2em;
 	}
 
-	& > div [data-budgie-component="roadmap-items"] { // Roadmap Items
+	& > div[data-budgie-component="roadmap-items"] { // Roadmap Items
 		.fullWidth;
 
 		& > div[data-budgie-component="roadmap-item"] { // Individual Items
