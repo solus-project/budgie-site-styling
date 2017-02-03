@@ -15,6 +15,10 @@ div[data-budgie-component="get-page"] {
 			& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] {
 				flex-direction: column;
 
+				& > div[data-budgie-component="get-list-item-logo"] { // Distribution Icon Container
+					display: none; // Hide distribution icons to keep the list denser on mobile.
+				}
+
 				& > div[data-budgie-component="get-list-item-info"] { // Info
 					margin-bottom: 25px;
 				}
@@ -49,6 +53,14 @@ div[data-budgie-component="get-page"] {
 			}
 
 			& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] {
+				& > div[data-budgie-component="get-list-item-logo"] { // Distribution Icon Container
+					width: 80px; // Enforce a minimum width of 80px
+
+					& > img { // Distribution Icon
+						height: 64px; // Match typical Download section height
+					}
+				}
+
 				& > div[data-budgie-component="get-list-item-info"] {
 					width: e("calc(100% - 140px)"); // Set to 100% - 140px (button)
 				}
