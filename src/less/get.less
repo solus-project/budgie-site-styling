@@ -8,11 +8,11 @@ div[data-budgie-component="get-page"] {
 	@media screen and (max-width: 1023px) { // Mobile
 		.fullWidth;
 
-		div[data-budgie-component="list"][data-budgie-component-type="get"] {
+		div[data-solbit="list"][data-budgie-component-type="get"] {
 			width: 80%;
 			margin: 5% 10%; // 5% vertical, 10% horizontal
 
-			& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] {
+			& > div[data-solbit="list-item"][data-budgie-component-type="get"] {
 				flex-direction: column;
 
 				& > div[data-budgie-component="get-list-item-logo"] { // Distribution Icon Container
@@ -45,14 +45,14 @@ div[data-budgie-component="get-page"] {
 		width: e("@{width}%");
 		margin: 0 @page-margin 2.5% @page-margin;
 
-		div[data-budgie-component="list"][data-budgie-component-type="get"] {
+		div[data-solbit="list"][data-budgie-component-type="get"] {
 			.fullWidth;
 
 			& > h1 { // Try Header
 				margin: 1.5% 0;
 			}
 
-			& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] {
+			& > div[data-solbit="list-item"][data-budgie-component-type="get"] {
 				& > div[data-budgie-component="get-list-item-logo"] { // Distribution Icon Container
 					width: 80px; // Enforce a minimum width of 80px
 
@@ -76,12 +76,12 @@ div[data-budgie-component="get-page"] {
 
 	// #endregion
 
-	div[data-budgie-component="list"][data-budgie-component-type="get"] { // Get List: Operating Systems to try Budgie on
+	div[data-solbit="list"][data-budgie-component-type="get"] { // Get List: Operating Systems to try Budgie on
 		& > h1 { // Try Header
 			font-size: 1.8em;
 		}
 
-		& > div[data-budgie-component="list-item"][data-budgie-component-type="get"] { // Individual Items
+		& > div[data-solbit="list-item"][data-budgie-component-type="get"] { // Individual Items
 			display: inline-flex;
 			display: -webkit-inline-flex;
 

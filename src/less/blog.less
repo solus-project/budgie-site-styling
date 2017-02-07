@@ -1,6 +1,6 @@
 // Blog List and Posts
 
-div[data-budgie-component="list"][data-budgie-component-type="blog"]  { // Blog List
+div[data-solbit="list"][data-budgie-component-type="blog"]  { // Blog List
 	// #region Scalable
 
 	@media screen and (max-width: 1023px) { // Mobile
@@ -19,6 +19,14 @@ div[data-budgie-component="list"][data-budgie-component-type="blog"]  { // Blog 
 
 	& > h3 { // Latest News heading
 		font-size: 1.8em;
+	}
+
+	& > div[data-solbit="list-item"][data-budgie-component-type="blog"] { // List Item
+		&:not(:last-of-type):not(:only-of-type) { // If this is both NOT the last List Item and NOT the only List Item
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+			border-bottom: 2px solid @grey;
+		}
 	}
 }
 
